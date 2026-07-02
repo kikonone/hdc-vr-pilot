@@ -1,0 +1,220 @@
+{
+  "status": "complete",
+  "created_at": "2026-07-02T07:17:18",
+  "input_feature_table": "E:\\hdc-vr-pilot\\experiments\\phase_02_full_multimodal_feature_extraction\\results\\full_multimodal_run_level_features.csv",
+  "input_feature_groups": "E:\\hdc-vr-pilot\\experiments\\phase_02_full_multimodal_feature_extraction\\results\\feature_groups.json",
+  "phase02_table_shape": [
+    487,
+    1252
+  ],
+  "difficulty_source_column": "difficulty_level",
+  "duplicate_run_key_rows_removed": 0,
+  "rows_after_four_class_filtering": 419,
+  "difficulty_levels_kept": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "target_mapping": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3
+  },
+  "class_distribution": [
+    {
+      "difficulty_level": 1,
+      "target": 0,
+      "sample_count": 104,
+      "proportion": 0.24821002386634844
+    },
+    {
+      "difficulty_level": 2,
+      "target": 1,
+      "sample_count": 106,
+      "proportion": 0.2529832935560859
+    },
+    {
+      "difficulty_level": 3,
+      "target": 2,
+      "sample_count": 104,
+      "proportion": 0.24821002386634844
+    },
+    {
+      "difficulty_level": 4,
+      "target": 3,
+      "sample_count": 105,
+      "proportion": 0.25059665871121717
+    }
+  ],
+  "identifier_columns_available": [
+    "subject_id",
+    "session_id",
+    "run_id",
+    "difficulty_level",
+    "target",
+    "run_key"
+  ],
+  "feature_count_without_performance": 1176,
+  "feature_count_with_performance": 1235,
+  "performance_feature_count_identified": 59,
+  "high_missing_threshold": 0.95,
+  "removed_high_missing_feature_count": 12,
+  "dropped_non_numeric_column_count": 0,
+  "missing_values_imputed": false,
+  "global_scaling_performed": false,
+  "model_training_performed": false,
+  "hdc_training_performed": false,
+  "recommended_main_dataset": "cleaned_multimodal_four_class_without_performance.csv",
+  "auxiliary_dataset": "cleaned_multimodal_four_class_with_performance.csv",
+  "subject_validation_readiness": {
+    "subject_id_exists": true,
+    "unique_subjects": 35,
+    "groupkfold_by_subject_feasible": true,
+    "recommended_number_of_splits": 5,
+    "conclusion": "Subject-wise GroupKFold is feasible with 35 subjects; recommended splits: 5.",
+    "samples_per_subject": [
+      {
+        "subject_id": "sub-cp003",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp004",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp005",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp006",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp008",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp009",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp011",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp012",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp013",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp014",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp015",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp016",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp017",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp018",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp019",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp020",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp022",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp023",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp024",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp025",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp026",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp027",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp028",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp029",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp030",
+        "sample_count": 11
+      },
+      {
+        "subject_id": "sub-cp031",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp032",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp033",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp035",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp036",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp037",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp038",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp039",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp042",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp043",
+        "sample_count": 12
+      }
+    ]
+  }
+}

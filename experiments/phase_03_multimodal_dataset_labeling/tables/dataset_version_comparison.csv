@@ -1,0 +1,3 @@
+dataset_version,recommended_use,sample_count,identifier_column_count,feature_count,performance_features_included,performance_features_excluded
+without_performance,Primary Phase 04 ML and Phase 05 HDC dataset,419,6,1176,0,59
+with_performance,Auxiliary upper-bound and shortcut-learning risk comparison,419,6,1235,59,0

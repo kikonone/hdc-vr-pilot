@@ -1,0 +1,358 @@
+{
+  "phases": {
+    "00": {
+      "path": "E:\\hdc-vr-pilot\\experiments\\phase_00_project_setup",
+      "exists": true,
+      "required_structure": {
+        "notebooks": {
+          "exists": true,
+          "file_count": 1
+        },
+        "scripts": {
+          "exists": true,
+          "file_count": 2
+        },
+        "results": {
+          "exists": true,
+          "file_count": 3
+        },
+        "figures": {
+          "exists": true,
+          "file_count": 0
+        },
+        "tables": {
+          "exists": true,
+          "file_count": 2
+        },
+        "logs": {
+          "exists": true,
+          "file_count": 3
+        }
+      },
+      "readme": {
+        "exists": true,
+        "size_bytes": 2559
+      },
+      "notebooks": [
+        {
+          "path": "E:\\hdc-vr-pilot\\experiments\\phase_00_project_setup\\notebooks\\00_revised_project_setup_and_inventory.ipynb",
+          "exists": true,
+          "executed": true,
+          "visible_outputs": true,
+          "code_cells": 8,
+          "output_cells": 8,
+          "errors": []
+        }
+      ],
+      "empty_files": []
+    },
+    "01": {
+      "path": "E:\\hdc-vr-pilot\\experiments\\phase_01_raw_data_modality_audit",
+      "exists": true,
+      "required_structure": {
+        "notebooks": {
+          "exists": true,
+          "file_count": 1
+        },
+        "scripts": {
+          "exists": true,
+          "file_count": 3
+        },
+        "results": {
+          "exists": true,
+          "file_count": 6
+        },
+        "figures": {
+          "exists": true,
+          "file_count": 2
+        },
+        "tables": {
+          "exists": true,
+          "file_count": 3
+        },
+        "logs": {
+          "exists": true,
+          "file_count": 1
+        }
+      },
+      "readme": {
+        "exists": true,
+        "size_bytes": 3313
+      },
+      "notebooks": [
+        {
+          "path": "E:\\hdc-vr-pilot\\experiments\\phase_01_raw_data_modality_audit\\notebooks\\01_raw_data_modality_audit.ipynb",
+          "exists": true,
+          "executed": true,
+          "visible_outputs": true,
+          "code_cells": 9,
+          "output_cells": 9,
+          "errors": []
+        }
+      ],
+      "empty_files": []
+    },
+    "02": {
+      "path": "E:\\hdc-vr-pilot\\experiments\\phase_02_full_multimodal_feature_extraction",
+      "exists": true,
+      "required_structure": {
+        "notebooks": {
+          "exists": true,
+          "file_count": 1
+        },
+        "scripts": {
+          "exists": true,
+          "file_count": 2
+        },
+        "results": {
+          "exists": true,
+          "file_count": 7
+        },
+        "figures": {
+          "exists": true,
+          "file_count": 2
+        },
+        "tables": {
+          "exists": true,
+          "file_count": 3
+        },
+        "logs": {
+          "exists": true,
+          "file_count": 5
+        }
+      },
+      "readme": {
+        "exists": true,
+        "size_bytes": 2307
+      },
+      "notebooks": [
+        {
+          "path": "E:\\hdc-vr-pilot\\experiments\\phase_02_full_multimodal_feature_extraction\\notebooks\\02_full_multimodal_feature_extraction.ipynb",
+          "exists": true,
+          "executed": true,
+          "visible_outputs": true,
+          "code_cells": 4,
+          "output_cells": 4,
+          "errors": []
+        }
+      ],
+      "empty_files": [
+        "experiments\\phase_02_full_multimodal_feature_extraction\\logs\\notebook_execute_stdout.txt",
+        "experiments\\phase_02_full_multimodal_feature_extraction\\logs\\notebook_execute_stdout_rerun.txt"
+      ]
+    }
+  },
+  "checks": {
+    "phase01_required_outputs": {
+      "raw_file_inventory.csv": {
+        "exists": true,
+        "size_bytes": 6022253
+      },
+      "run_modality_availability.csv": {
+        "exists": true,
+        "size_bytes": 97324
+      },
+      "modality_summary.csv": {
+        "exists": true,
+        "size_bytes": 156
+      },
+      "unknown_files_for_review.csv": {
+        "exists": true,
+        "size_bytes": 593789
+      }
+    },
+    "phase02_required_outputs": {
+      "full_multimodal_run_level_features.csv": {
+        "exists": true,
+        "size_bytes": 8848511
+      },
+      "feature_groups.json": {
+        "exists": true,
+        "size_bytes": 63934
+      },
+      "failed_files.csv": {
+        "exists": true,
+        "size_bytes": 96
+      },
+      "extraction_report.json": {
+        "exists": true,
+        "size_bytes": 5073
+      }
+    },
+    "phase01_identifiers": {
+      "columns_present": {
+        "subject_id": true,
+        "session_id": true,
+        "run_id": true,
+        "difficulty_level": true,
+        "run_key": true
+      },
+      "rows": 487,
+      "runs": 487
+    },
+    "phase02_identifiers": {
+      "columns_present": {
+        "subject_id": true,
+        "session_id": true,
+        "run_id": true,
+        "difficulty_level": true,
+        "run_key": true
+      },
+      "rows": 487,
+      "columns": 1252,
+      "feature_columns_excluding_identifiers": 1247,
+      "duplicate_columns": 0
+    },
+    "feature_groups": {
+      "identifier_columns": 5,
+      "physiological_features": 233,
+      "eye_tracking_features": 426,
+      "head_movement_features": 159,
+      "flight_parameter_features": 328,
+      "control_input_features": 0,
+      "performance_features": 59,
+      "unknown_features": 42
+    },
+    "performance_separated": {
+      "exists": true,
+      "count": 59,
+      "sample": [
+        "performance_cumulative_cumulative_airspeed_error_kts",
+        "performance_cumulative_cumulative_glideslope_error_deg",
+        "performance_cumulative_cumulative_localizer_error_deg",
+        "performance_cumulative_cumulative_total_error",
+        "performance_perfmetric_airspeed_error_kts_iqr",
+        "performance_perfmetric_airspeed_error_kts_kurtosis",
+        "performance_perfmetric_airspeed_error_kts_max",
+        "performance_perfmetric_airspeed_error_kts_mean"
+      ]
+    },
+    "unknown_separated": {
+      "exists": true,
+      "count": 42,
+      "sample": [
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_iqr",
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_kurtosis",
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_max",
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_mean",
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_median",
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_min",
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_missing_ratio",
+        "unknown_lslshimmertorsoacc_accelerometry_torso_x_mps2_num_missing"
+      ]
+    },
+    "features_per_modality": [
+      {
+        "modality": "eye_tracking",
+        "feature_group": "eye_tracking_features",
+        "feature_count": 426,
+        "runs_with_features": 487,
+        "non_missing_values": 198622
+      },
+      {
+        "modality": "ecg",
+        "feature_group": "physiological_features",
+        "feature_count": 57,
+        "runs_with_features": 487,
+        "non_missing_values": 27627
+      },
+      {
+        "modality": "eda",
+        "feature_group": "physiological_features",
+        "feature_count": 44,
+        "runs_with_features": 475,
+        "non_missing_values": 20835
+      },
+      {
+        "modality": "emg",
+        "feature_group": "physiological_features",
+        "feature_count": 84,
+        "runs_with_features": 487,
+        "non_missing_values": 40842
+      },
+      {
+        "modality": "respiration",
+        "feature_group": "physiological_features",
+        "feature_count": 48,
+        "runs_with_features": 487,
+        "non_missing_values": 18825
+      },
+      {
+        "modality": "head_movement",
+        "feature_group": "head_movement_features",
+        "feature_count": 159,
+        "runs_with_features": 487,
+        "non_missing_values": 76351
+      },
+      {
+        "modality": "xplane",
+        "feature_group": "flight_parameter_features",
+        "feature_count": 328,
+        "runs_with_features": 487,
+        "non_missing_values": 155387
+      },
+      {
+        "modality": "control_input",
+        "feature_group": "control_input_features",
+        "feature_count": 0,
+        "runs_with_features": 0,
+        "non_missing_values": 0
+      },
+      {
+        "modality": "performance",
+        "feature_group": "performance_features",
+        "feature_count": 59,
+        "runs_with_features": 419,
+        "non_missing_values": 24721
+      },
+      {
+        "modality": "unknown",
+        "feature_group": "unknown_features",
+        "feature_count": 42,
+        "runs_with_features": 454,
+        "non_missing_values": 19068
+      }
+    ],
+    "more_than_one_modality": {
+      "passed": true,
+      "modalities": [
+        "eye_tracking",
+        "ecg",
+        "eda",
+        "emg",
+        "respiration",
+        "head_movement",
+        "xplane",
+        "performance",
+        "unknown"
+      ]
+    },
+    "phase02_no_modeling_artifacts": {
+      "suspicious_files": []
+    },
+    "phase02_report_limitations": {
+      "mentions_no_imputation_scaling_training": true
+    },
+    "vrdataset_read_only_evidence": {
+      "file_count": 9022,
+      "latest_file": "vrdataset\\SHA256SUMS.txt",
+      "latest_write_time": "2022-08-25T03:32:34",
+      "phase_artifact_names_found_in_vrdataset": []
+    },
+    "empty_files": [
+      {
+        "phase": "02",
+        "file": "experiments\\phase_02_full_multimodal_feature_extraction\\logs\\notebook_execute_stdout.txt"
+      },
+      {
+        "phase": "02",
+        "file": "experiments\\phase_02_full_multimodal_feature_extraction\\logs\\notebook_execute_stdout_rerun.txt"
+      }
+    ]
+  },
+  "manual_confirmation_questions": [
+    "No Phase 00-02 output artifact names were found under vrdataset; read-only status is supported by file placement, but only OS/file-history auditing can prove no metadata changes occurred.",
+    "Confirm whether the absence of explicit control-input streams is expected, or whether another raw stream should be interpreted as controls.",
+    "Confirm how Phase 03 should handle unknown torso accelerometer features: exclude, keep as unknown, or map after domain review."
+  ]
+}

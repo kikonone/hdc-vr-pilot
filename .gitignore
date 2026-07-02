@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.tmp
+~$*
+*.log
+vrdataset/dataPackage/
+vrdataset/referenceDocuments/DataQualityReport.pdf
+experiments/phase_02_full_multimodal_feature_extraction/results/feature_extraction_long_table.csv
+ipynb_checkpoints/
+_github_upload_*/

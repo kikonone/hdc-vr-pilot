@@ -1,0 +1,323 @@
+{
+  "file_checks": [
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\notebooks\\03_multimodal_dataset_labeling_four_class.ipynb",
+      "exists": true,
+      "size_bytes": 81808,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\cleaned_multimodal_four_class_without_performance.csv",
+      "exists": true,
+      "size_bytes": 7442223,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\cleaned_multimodal_four_class_with_performance.csv",
+      "exists": true,
+      "size_bytes": 7752788,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\feature_columns_without_performance.json",
+      "exists": true,
+      "size_bytes": 57317,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\feature_columns_with_performance.json",
+      "exists": true,
+      "size_bytes": 60461,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\feature_groups_without_performance.json",
+      "exists": true,
+      "size_bytes": 60050,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\feature_groups_with_performance.json",
+      "exists": true,
+      "size_bytes": 63315,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\target_mapping.json",
+      "exists": true,
+      "size_bytes": 328,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\leakage_check_report.json",
+      "exists": true,
+      "size_bytes": 8321,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\results\\dataset_construction_report.json",
+      "exists": true,
+      "size_bytes": 5210,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\tables\\class_distribution.csv",
+      "exists": true,
+      "size_bytes": 164,
+      "non_empty": true
+    },
+    {
+      "path": "experiments\\phase_03_multimodal_dataset_labeling\\tables\\subject_distribution.csv",
+      "exists": true,
+      "size_bytes": 855,
+      "non_empty": true
+    }
+  ],
+  "notebook": {
+    "exists": true,
+    "code_cells": 4,
+    "code_cells_with_outputs": 4,
+    "execution_counts": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "executed": true,
+    "visible_outputs": true
+  },
+  "dataset_shapes": {
+    "without_performance": [
+      419,
+      1182
+    ],
+    "with_performance": [
+      419,
+      1241
+    ]
+  },
+  "identifier_columns": {
+    "without_performance": {
+      "subject_id": true,
+      "session_id": true,
+      "run_id": true,
+      "difficulty_level": true,
+      "target": true,
+      "run_key": true
+    },
+    "with_performance": {
+      "subject_id": true,
+      "session_id": true,
+      "run_id": true,
+      "difficulty_level": true,
+      "target": true,
+      "run_key": true
+    }
+  },
+  "target_encoding_ok": {
+    "without_performance": true,
+    "with_performance": true
+  },
+  "forbidden_columns_in_feature_lists": {
+    "without_performance": [],
+    "with_performance": []
+  },
+  "performance_features": {
+    "without_feature_list_count": 0,
+    "with_feature_list_count": 59,
+    "with_performance_group_count": 59,
+    "without_performance_group_count": 0
+  },
+  "class_distribution": [
+    {
+      "difficulty_level": 1,
+      "target": 0,
+      "sample_count": 104,
+      "proportion": 0.2482100238663484
+    },
+    {
+      "difficulty_level": 2,
+      "target": 1,
+      "sample_count": 106,
+      "proportion": 0.2529832935560859
+    },
+    {
+      "difficulty_level": 3,
+      "target": 2,
+      "sample_count": 104,
+      "proportion": 0.2482100238663484
+    },
+    {
+      "difficulty_level": 4,
+      "target": 3,
+      "sample_count": 105,
+      "proportion": 0.2505966587112171
+    }
+  ],
+  "subject_count": 35,
+  "subject_distribution_rows": 35,
+  "empty_files": [],
+  "groupkfold": {
+    "subject_id_exists": true,
+    "unique_subjects": 35,
+    "groupkfold_by_subject_feasible": true,
+    "recommended_number_of_splits": 5,
+    "conclusion": "Subject-wise GroupKFold is feasible with 35 subjects; recommended splits: 5.",
+    "samples_per_subject": [
+      {
+        "subject_id": "sub-cp003",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp004",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp005",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp006",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp008",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp009",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp011",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp012",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp013",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp014",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp015",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp016",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp017",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp018",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp019",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp020",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp022",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp023",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp024",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp025",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp026",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp027",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp028",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp029",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp030",
+        "sample_count": 11
+      },
+      {
+        "subject_id": "sub-cp031",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp032",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp033",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp035",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp036",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp037",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp038",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp039",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp042",
+        "sample_count": 12
+      },
+      {
+        "subject_id": "sub-cp043",
+        "sample_count": 12
+      }
+    ]
+  },
+  "phase03_avoided": {
+    "model_training_performed": false,
+    "hdc_training_performed": false,
+    "global_scaling_performed": false,
+    "missing_values_imputed": false
+  },
+  "feature_counts": {
+    "without_performance": 1176,
+    "with_performance": 1235
+  },
+  "warnings": [
+    "Incidental _write_test.tmp remains in the Phase 03 folder from filesystem troubleshooting; it is not a requested result file.",
+    "Incidental Python cache temp file remains under Phase 03 scripts from bytecode-cache troubleshooting."
+  ]
+}

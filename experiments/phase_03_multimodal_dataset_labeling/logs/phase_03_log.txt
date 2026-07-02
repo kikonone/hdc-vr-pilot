@@ -1,0 +1,14 @@
+Phase 03 multimodal dataset labeling log
+Created at: 2026-07-02T07:17:18
+Input table: E:\hdc-vr-pilot\experiments\phase_02_full_multimodal_feature_extraction\results\full_multimodal_run_level_features.csv
+Rows loaded: 487
+Rows retained for four-class labels: 419
+Duplicate run_key rows removed: 0
+Features without performance: 1176
+Features with performance: 1235
+High-missing threshold: 0.95
+High-missing features removed: 12
+Dropped non-numeric non-identifier columns: 0
+Leakage conclusion: Identifier and label columns are excluded from feature lists. Performance metrics are excluded from the primary without-performance dataset and retained only for auxiliary upper-bound comparison.
+GroupKFold conclusion: Subject-wise GroupKFold is feasible with 35 subjects; recommended splits: 5.
+No imputation, scaling, ML training, or HDC training was performed.

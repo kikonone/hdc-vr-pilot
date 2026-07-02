@@ -1,0 +1,8 @@
+feature_group,feature_count
+control_input_features,0
+eye_tracking_features,416
+flight_parameter_features,326
+head_movement_features,159
+performance_features,0
+physiological_features,233
+unknown_features,42

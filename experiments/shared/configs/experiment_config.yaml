@@ -1,0 +1,83 @@
+﻿project:
+  name: hdc_vr_pilot_four_class_multimodal
+  root_name: hdc-vr-pilot
+  dataset_dir: vrdataset
+  experiments_dir: experiments
+
+task:
+  objective: four_class_workload_proxy_classification
+  target_labels: [1, 2, 3, 4]
+  target_label_description: VR piloting difficulty levels 1 through 4
+  final_method_family: hyperdimensional_computing
+  current_phase_scope: project_setup_and_inventory_only
+
+source_data:
+  main_source: vrdataset/dataPackage
+  reference_source: vrdataset/referenceDocuments
+  starter_code_role: eye_tracking_oculomotor_pilot_reference_only
+  starter_code_is_final_dataset: false
+  data_package_is_main_multimodal_source: true
+
+data_safety:
+  dataset_read_only: true
+  generated_outputs_dir: experiments
+  copied_data_dir: experiments/shared/data
+  do_not_modify:
+    - vrdataset
+
+phases:
+  - index: 0
+    id: phase_00_project_setup
+    title: Project setup and data inventory
+    status: complete
+  - index: 1
+    id: phase_01_raw_data_modality_audit
+    title: Raw data audit and modality inventory
+    status: not_started
+  - index: 2
+    id: phase_02_full_multimodal_feature_extraction
+    title: Full multimodal feature extraction
+    status: not_started
+  - index: 3
+    id: phase_03_multimodal_dataset_labeling
+    title: Multimodal dataset construction and four-class labeling
+    status: not_started
+  - index: 4
+    id: phase_04_ml_baseline_four_class
+    title: Traditional ML four-class baseline
+    status: not_started
+  - index: 5
+    id: phase_05_basic_hdc_four_class
+    title: Basic HDC four-class classification
+    status: not_started
+  - index: 6
+    id: phase_06_hdc_classifier_screening
+    title: HDC classifier screening
+    status: not_started
+  - index: 7
+    id: phase_07_single_modality_contribution
+    title: Single-modality contribution analysis
+    status: not_started
+  - index: 8
+    id: phase_08_multimodal_fusion
+    title: Multimodal fusion strategy comparison
+    status: not_started
+  - index: 9
+    id: phase_09_robustness_missing_modality
+    title: Robustness and missing-modality analysis
+    status: not_started
+  - index: 10
+    id: phase_10_onlinehd_lsl_simulation
+    title: OnlineHD and LSL simulation
+    status: not_started
+
+phase_00_outputs:
+  notebook: experiments/phase_00_project_setup/notebooks/00_revised_project_setup_and_inventory.ipynb
+  data_inventory: experiments/phase_00_project_setup/results/data_inventory.csv
+  revised_phase_structure: experiments/phase_00_project_setup/results/revised_phase_structure.csv
+  project_setup_report: experiments/phase_00_project_setup/results/project_setup_report.json
+  file_type_summary: experiments/phase_00_project_setup/tables/file_type_summary.csv
+  folder_summary: experiments/phase_00_project_setup/tables/folder_summary.csv
+  log: experiments/phase_00_project_setup/logs/phase_00_log.txt
+
+random_seed: 42

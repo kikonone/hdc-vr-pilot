@@ -1,0 +1,2 @@
+model,accuracy_mean,accuracy_std,balanced_accuracy_mean,balanced_accuracy_std,macro_f1_mean,macro_f1_std,weighted_f1_mean,weighted_f1_std,fit_predict_seconds_mean,fit_predict_seconds_std
+Basic Prototype HDC,0.5943775100401607,0.024695529871985575,0.5950865800865801,0.024419977067551914,0.5946137440235045,0.02620203239199272,0.5941729491562893,0.026777182860262906,0.2766863200056832,0.013695836786372484

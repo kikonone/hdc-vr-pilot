@@ -1,32 +1,23 @@
 # HDC VR Pilot
 
-## 项目概述
+## Project Overview
+This project focuses on multimodal physiological and behavioral data from VR flight missions, constructing a four-class workload proxy identification process. The current research objective is to map task difficulty levels 1, 2, 3, and 4 to four classification labels based on PhysioNet VR Piloting data, and to prepare reproducible experimental data for subsequent traditional machine learning baselines and Hyperdimensional Computing (HDC) classification models.
+The current repository has completed data inventory, raw modality auditing, multimodal feature extraction, and the construction of the four-class modeling dataset. Model training, HDC classifier selection, multimodal fusion, and online simulation are still in the later stages.
+## Research Task
+- Task Type: Four-class workload proxy classification
+- Tag Source: VR flight mission difficulty level, not questionnaires or direct psychological stress labeling
+- Tag Mapping: `difficulty_level` 1, 2, 3, 4 are mapped to `target` 0, 1, 2, 3 respectively
+- Main Methodology: Hyperdimensional Computing, HDC
+- Comparison Methods: Traditional machine learning baseline, single-modal contribution analysis, multimodal fusion analysis
+## Data Description
+The raw data comes from the PhysioNet VR Piloting dataset. This project adheres to the following data security rules:
+- `vrdataset` is used as a read-only data source.
+- All generated experimental scripts, results, graphs, logs, and reports are stored in `experiments`.
+- The complete raw data directory `vrdataset/dataPackage/` is not uploaded to the GitHub repository.
+- Extremely large files, such as `DataQualityReport.pdf` and `feature_extraction_long_table.csv`, are not included in Git tracking.
+To fully reproduce the experiments, please obtain the raw data yourself according to the dataset license requirements and place the data locally in `vrdataset/dataPackage/`.
 
-本项目面向 VR 飞行任务中的多模态生理与行为数据，构建四分类工作负荷代理识别流程。当前研究目标是基于 PhysioNet VR Piloting 数据，将任务难度等级 1、2、3、4 映射为四个分类标签，并为后续传统机器学习基线与 Hyperdimensional Computing, HDC, 分类模型准备可复现实验数据。
-
-当前仓库已完成数据盘点、原始模态审计、多模态特征提取，以及四分类建模数据集构建。模型训练、HDC 分类器筛选、多模态融合和在线模拟仍属于后续阶段。
-
-## 研究任务
-
-- 任务类型：四分类 workload proxy classification
-- 标签来源：VR 飞行任务难度等级，而不是问卷或直接心理压力标注
-- 标签映射：`difficulty_level` 1, 2, 3, 4 分别映射为 `target` 0, 1, 2, 3
-- 主要方法方向：Hyperdimensional Computing, HDC
-- 对比方法：传统机器学习基线、单模态贡献分析、多模态融合分析
-
-## 数据说明
-
-原始数据来自 PhysioNet VR Piloting 数据集。本项目遵守数据安全规则：
-
-- `vrdataset` 作为只读数据源使用
-- 所有生成的实验脚本、结果、图表、日志和报告均保存在 `experiments`
-- GitHub 仓库中未上传完整原始数据目录 `vrdataset/dataPackage/`
-- 超大文件也未纳入 Git 跟踪，例如 `DataQualityReport.pdf` 和 `feature_extraction_long_table.csv`
-
-如需完整复现实验，请先按照数据集许可要求自行获取原始数据，并将数据放置到本地 `vrdataset/dataPackage/`。
-
-## 项目结构
-
+## Project Structure
 ```text
 .
 ├── EXPERIMENT_STATUS.md
@@ -49,51 +40,44 @@
     └── starterCode/
 ```
 
-## 实验阶段
+## Experimental stage
 
-| 阶段 | 目录 | 状态 | 内容 |
+| Phase | Table of Contents | Status | Content |
+
 |---:|---|---|---|
-| 00 | `phase_00_project_setup` | 已完成 | 项目结构、文件盘点、实验计划 |
-| 01 | `phase_01_raw_data_modality_audit` | 已完成 | 原始数据扫描、模态覆盖审计、运行级清单 |
-| 02 | `phase_02_full_multimodal_feature_extraction` | 已完成 | 多模态运行级聚合特征提取 |
-| 03 | `phase_03_multimodal_dataset_labeling` | 已完成 | 四分类标签构建、泄漏风险分离、建模数据集输出 |
-| 04 | `phase_04_ml_baseline_four_class` | 未开始 | 传统机器学习四分类基线 |
-| 05 | `phase_05_basic_hdc_four_class` | 未开始 | 基础 HDC 四分类模型 |
-| 06 | `phase_06_hdc_classifier_screening` | 未开始 | HDC 分类器筛选 |
-| 07 | `phase_07_single_modality_contribution` | 未开始 | 单模态贡献分析 |
-| 08 | `phase_08_multimodal_fusion` | 未开始 | 多模态融合策略比较 |
-| 09 | `phase_09_robustness_missing_modality` | 未开始 | 缺失模态鲁棒性分析 |
-| 10 | `phase_10_onlinehd_lsl_simulation` | 未开始 | OnlineHD 与 LSL 模拟 |
+| 00 | `phase_00_project_setup` | Completed | Project structure, file inventory, experimental plan |
+| 01 | `phase_01_raw_data_modality_audit` | Completed | Raw data scanning, modality coverage audit, run-level inventory |
+| 02 | `phase_02_full_multimodal_feature_extraction` | Completed | Multimodal run-level aggregated feature extraction |
+| 03 | `phase_03_multimodal_dataset_labeling` | Completed | Four-class label construction, leakage risk separation, modeling dataset output |
+| 04 | `phase_04_ml_baseline_four_class` | Not started | Traditional machine learning four-class baseline |
+| 05 | `phase_05_basic_hdc_four_class` | Not started | Basic HDC Four-Classification Model |
+| 06 | `phase_06_hdc_classifier_screening` | Not Started | HDC Classifier Screening |
+| 07 | `phase_07_single_modality_contribution` | Not Started | Single-Modality Contribution Analysis |
+| 08 | `phase_08_multimodal_fusion` | Not Started | Comparison of Multimodal Fusion Strategies |
+| 09 | `phase_09_robustness_missing_modality` | Not Started | Robustness Analysis of Missing Modalities |
+| 10 | `phase_10_onlinehd_lsl_simulation` | Not Started | OnlineHD and LSL Simulation |
 
-## 当前数据集状态
-
-Phase 03 已生成两个四分类数据集版本：
-
-- 主数据集：`experiments/phase_03_multimodal_dataset_labeling/results/cleaned_multimodal_four_class_without_performance.csv`
-- 辅助数据集：`experiments/phase_03_multimodal_dataset_labeling/results/cleaned_multimodal_four_class_with_performance.csv`
-
-主数据集用于后续 Phase 04 和 Phase 05，已排除 performance metrics，以降低模型学习任务表现捷径的风险。辅助数据集保留 performance metrics，可用于上界对照和泄漏风险分析。
-
-当前 Phase 03 摘要：
-
-- 样本数：419
-- 类别数：4
-- 主数据集特征数：1,176
-- 含 performance metrics 的辅助数据集特征数：1,235
-- 被试数：35
-- 建议验证方式：subject-wise GroupKFold，建议 5 折
-- 类别分布：104、106、104、105，整体较均衡
+## Current dataset status
+Phase 03 has generated two versions of the four-class classification dataset:
+- Main dataset: `experiments/phase_03_multimodal_dataset_labeling/results/cleaned_multimodal_four_class_without_performance.csv`
+- Auxiliary dataset: `experiments/phase_03_multimodal_dataset_labeling/results/cleaned_multimodal_four_class_with_performance.csv`
+The main dataset is used for subsequent Phases 04 and 05 and has excluded performance metrics to reduce the risk of performance shortcuts in the model learning task. The auxiliary dataset retains performance metrics and can be used for upper bound comparison and leakage risk analysis.
+Current Phase 03 Summary:
+- Number of samples: 419
+- Number of classes: 4
+- Number of features in the main dataset: 1,176
+- Number of features in the auxiliary dataset including performance metrics: 1,235
+- Number of participants: 35
+- Recommended validation method: subject-wise GroupKFold, 50% recommended
+- Class distribution: 104, 106, 104, 105, generally balanced
 
 ## 环境安装
 
-建议使用 Python 3.10 或更新版本。
-
-```bash
+It is recommended to use Python 3.10 or later.
+``bash
 pip install -r requirements.txt
 ```
-
-主要依赖包括：
-
+Main dependencies include:
 - pandas
 - numpy
 - scipy
@@ -106,54 +90,22 @@ pip install -r requirements.txt
 - ipykernel
 - pyxdf
 
-## 使用方式
+## Key Design Principles
 
-1. 准备数据
+- The raw data is read-only; experimental outputs are not written into `vrdataset`
+- Avoid shortcut learning by excluding performance metrics from the main modeling pipeline
+- Retain missing values to be handled during the modeling stage
+- Adopt subject-wise splitting to evaluate generalization capability
+- Store stage outputs in their corresponding phase directories for easy auditing and reproducibility
 
-   将完整原始数据放入本地：
+## Subsequent Work
+- Train a traditional machine learning four-classification baseline
+- Implement a basic HDC four-classification model
+- Screen different HDC classifiers and encoding strategies
+- Analyze the contribution of single modalities
+- Compare multi-modal fusion strategies
+- Test the robustness against missing modalities
+- Explore scenario simulation of OnlineHD and LSL
 
-   ```text
-   vrdataset/dataPackage/
-   ```
-
-2. 查看项目状态
-
-   ```text
-   EXPERIMENT_STATUS.md
-   ```
-
-3. 按阶段查看和运行实验
-
-   每个阶段目录均包含对应的 README、notebook、脚本、结果、表格、图和日志。
-
-4. 后续建模建议
-
-   从 Phase 04 开始，应使用主数据集：
-
-   ```text
-   experiments/phase_03_multimodal_dataset_labeling/results/cleaned_multimodal_four_class_without_performance.csv
-   ```
-
-   所有缺失值填补、标准化、特征选择和模型训练都应放在交叉验证折内完成，避免数据泄漏。
-
-## 关键设计原则
-
-- 原始数据只读，不在 `vrdataset` 中写入实验产物
-- 建模主线不使用 performance metrics，避免捷径学习
-- 缺失值保留到建模阶段处理
-- 使用 subject-wise 划分评估泛化能力
-- 阶段产物保存在对应 phase 目录中，便于审计和复现
-
-## 后续工作
-
-- Phase 04：训练传统机器学习四分类基线
-- Phase 05：实现基础 HDC 四分类模型
-- Phase 06：筛选不同 HDC 分类器与编码策略
-- Phase 07：分析单模态贡献
-- Phase 08：比较多模态融合策略
-- Phase 09：测试缺失模态鲁棒性
-- Phase 10：探索 OnlineHD 与 LSL 场景模拟
-
-## 许可与数据限制
-
-代码和实验产物可用于研究复现与方法开发。原始数据受 PhysioNet Restricted Health Data License 约束，使用者应自行确认数据访问权限、许可要求和共享限制。
+## Permissions and Data Restrictions
+Codes and experimental outputs may be used for research reproduction and method development. Raw data is subject to the PhysioNet Restricted Health Data License, and users shall independently verify data access rights, licensing requirements and sharing restrictions.
